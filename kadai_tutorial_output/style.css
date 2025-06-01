@@ -1,10 +1,10 @@
+/* PC、スマホ共通スタイル */
 *{
   box-sizing: border-box;
 }
 p{
   font-size: 15px;
 }
-/* PC、スマホ共通スタイル */
 body{
   max-width: 1080px;
   margin: 0 auto 0 auto;
@@ -14,6 +14,7 @@ header{
   display: flex;
   justify-content: space-between;
 }
+/* ナビゲーションのレイアウト */
 #nav-pc{
   font-size: 14px;
 }
@@ -24,6 +25,7 @@ header{
 #nav-pc li{
   list-style: none;
 }
+/* ナビゲーションのリンクの装飾設定 */
 #nav-pc a{
   text-decoration: none;
   margin-left: 20px;
@@ -32,21 +34,15 @@ header{
 #nav-pc a:hover{
   text-decoration: underline;
 }
+/* スマホ用ナビを非表示 */
 #nav-sp,
 #menu-sp{
   display: none;
 }
+/* メインビジュアル*/
 #main-visual{
   position: relative;
   height: 400px;
-}
-#main-visual > img{
-  position: absolute;
-  top: 0;
-  right: 0;
-  max-width: 620px;
-  border-radius: 476px 0 0 0;
-  z-index: 10;
 }
 #main-massage{
   position: absolute;
@@ -56,8 +52,8 @@ header{
   color: #ffffff;
   border-radius: 0 0 476px 0;
   max-width: 620px;
-  width: 100%;
   height: 100%;
+  width: 100%;
   z-index: 11;
 }
 #main-massage > h1{
@@ -68,19 +64,26 @@ header{
   font-size: 28px;
   margin: 0 0 0 50px;
 }
-
+#main-visual > img{
+  max-width: 620px;
+  border-radius: 476px 0 0 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
 /* 見出し */
 h2{
   margin: 40px 0 0 0;
 }
- /* h2要素すべてにおいて、後ろにライン画像を付ける */
-h2::after{
+h2::after{ /* h2要素すべてにおいて、後ろにライン画像を付ける */
   content: url("images/line.png");
   margin-left: 10px;
 }
 h3{
   font-size: 27px;
 }
+
 /* ミッション */
 #mission{
   margin: 80px auto 80px auto;
@@ -99,7 +102,8 @@ h3{
   margin-top: 50px;
   width: 100%;
 }
-/* product */
+
+/* プロダクト */
 #product{
   background-color: #fafafa;
   margin: 80px 0 80px 0;
@@ -160,6 +164,8 @@ h3{
   position: relative;
   bottom: -42px;
 }
+
+/* ABOUT US */
 #aboutus{
   margin: 80px auto 80px auto;
 }
@@ -195,6 +201,7 @@ h3{
   margin: 0;
 }
 
+/* ビジョン */
 #vision{
   margin: 80px auto 80px auto;
 }
@@ -237,6 +244,7 @@ h3{
   margin: 10px 0 0 0;
 }
 
+/* 会社概要 */
 #company{
   margin: 80px auto 80px auto;
 }
@@ -254,29 +262,30 @@ h3{
 .tableheader-first{
   border-top-color: #2710d5;
   border-top-width: 1px;
-  border-bottom-style: solid;
+  border-top-style: solid;
 }
 .cell{
   padding: 30px;
-  border-top-color: #ececec;
-  border-top-width: 1px;
+  border-bottom-color: #ececec;
+  border-bottom-width: 1px;
   border-bottom-style: solid;
 }
 .cell-first{
   border-top-color: #ececec;
   border-top-width: 1px;
-  border-bottom-style: solid;
+  border-top-style: solid;
 }
 #company > iframe{
   width: 100%;
   height: 368px;
-  margin: 40px 0 0 0;
+  margin-top: 40px;
 }
 
+/* お問い合わせ */
 #contact{
   margin: 80px auto 80px auto;
 }
-#contact>form>div{
+#contact > form > div{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -302,8 +311,8 @@ h3{
   border-bottom-color: #707070;
   border-style: solid;
   background-color: #fafafa;
-  width: 400px;
   height: 56px;
+  width: 400px;
 }
 .contact-textarea {
   border-top: 0px;
@@ -315,6 +324,7 @@ h3{
   width: 400px;
   height: 200px;
 }
+/* 個人情報の取扱 */
 #contact dt{
   font-weight: bold;
 }
@@ -337,10 +347,10 @@ footer{
   padding: 80px 80px 30px 80px;
 }
 #footer-logo{
-  margin: 0 0 30px 0;
+  margin-bottom: 30px;
 }
 #footer-link{
-margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 #footer-link > a{
   text-decoration: none;
@@ -363,6 +373,7 @@ margin-bottom: 50px;
   margin: 0;
 }
 
+/* MISSIONページ */
 .mission-main-inner{
   background-image: url("images/mission/mission-main.png");
   background-repeat: no-repeat;
@@ -441,6 +452,8 @@ margin-bottom: 50px;
 .fivegoals-p{
   margin: 0;
 }
+
+/* PRODUCTページ */
 .product-main-inner{
   background-image: url("images/product/product-main.png");
   background-repeat: no-repeat;
@@ -466,7 +479,7 @@ margin-bottom: 50px;
 }
 #product-title > p{
   position: absolute;
-  top: 359px;
+  top: 350px;
   left: 100px;
   font-size: 16px;
 }
@@ -510,7 +523,9 @@ margin-bottom: 50px;
   margin: 0;
 }
 
-/* スマートフォン用 */
+/*====================
+ スマートフォン用のスタイル
+=====================*/
 @media screen and (max-width: 767px){
   #nav-pc{
     display: none;
@@ -530,12 +545,7 @@ margin-bottom: 50px;
     width: 100%;
     height: 100%;
     display: none;
-  }
-  #nav-sp ul{
-    padding: 0;
-  }
-  #nav-sp li{
-    list-style: none;
+    z-index: 100;
   }
   #close{
     position: absolute;
@@ -543,6 +553,12 @@ margin-bottom: 50px;
     right: 20px;
     background-color: transparent;
     border: none;
+  }
+  #nav-sp nav ul{
+    padding-left: 0;
+  }
+  #nav-sp nav li{
+    list-style: none;
   }
   #logo-sp{
     margin: 80px 0 30px 20px;
@@ -571,9 +587,11 @@ margin-bottom: 50px;
   #sns > a{
     margin-right: 30px;
   }
+
+  /* メインビジュアル */
   #main-visual{
     position: relative;
-    height: 479px;
+    height: 470px;
   }
   #main-visual > div{
     text-align: center;
@@ -600,6 +618,8 @@ margin-bottom: 50px;
     font-size: 24px;
     margin: 10px 0 0 0;
   }
+
+  /* ミッション */
   #mission{
     margin: 20px 0 20px 0;
     padding: 0 20px 0 20px;
@@ -611,6 +631,8 @@ margin-bottom: 50px;
     width: 100%;
     margin: 0;
   }
+
+  /* プロダクト */
   #product{
     margin: 0;
     padding: 10px 20px 0 20px;
@@ -640,6 +662,8 @@ margin-bottom: 50px;
   #product-more{
     text-align: left;
   }
+
+  /* ABOUT US */
   #aboutus{
     margin: 80px 20px 80px 20px;
   }
@@ -667,6 +691,8 @@ margin-bottom: 50px;
   .culture-description{
     margin: 0;
   }
+
+  /* ビジョン */
   #vision{
     margin: 80px 20px 80px 20px;
   }
@@ -678,6 +704,8 @@ margin-bottom: 50px;
   .vision-box > div > h4{
     margin: 60px 0 0 0;
   }
+
+  /* 会社概要 */
   #company{
     margin: 0 20px 0 20px;
   }
@@ -693,6 +721,8 @@ margin-bottom: 50px;
   #company > iframe{
     height: 240px;
   }
+
+  /* お問い合わせ */
   #contact{
     margin: 80px 20px 80px 20px;
   }
@@ -718,6 +748,8 @@ margin-bottom: 50px;
   .radiobutton{
     margin-bottom: 20px;
   }
+
+  /* フッター */
   footer{
     padding: 30px 20px 50px 20px;
     text-align: left;
@@ -741,6 +773,7 @@ margin-bottom: 50px;
     margin-top: 30px;
   }
 
+  /* MISSIONページ */
   #mission-main{
     height: 256px;
     margin-top: 4%;
@@ -770,13 +803,16 @@ margin-bottom: 50px;
   }
   .mission-h2{
     font-size: 38px;
-    padding: 0;
+    margin: 0;
   }
   .mission-h2::after{
     content: none;
   }
-  #mission-s3dgs > img{
+  #mission-s2dgs > img{
     width: 100%;
+  }
+  #mission-five-goals{
+    flex-direction: column;
   }
   #mission-five-goals > div{
     padding: 0;
@@ -794,6 +830,8 @@ margin-bottom: 50px;
   .fivegoals-image-left{
     align-self: center;
   }
+
+  /* PRODUCTページ */
   #product-main{
     height: 256px;
     margin-top: 4%;
