@@ -44,7 +44,7 @@ header{
   position: relative;
   height: 400px;
 }
-#main-massage{
+#main-message{
   position: absolute;
   top: 0;
   left: 0;
@@ -56,11 +56,11 @@ header{
   width: 100%;
   z-index: 11;
 }
-#main-massage > h1{
+#main-message > h1{
   font-size: 60px;
   margin: 100px 0 0 50px;
 }
-#main-massage > p{
+#main-message > p{
   font-size: 28px;
   margin: 0 0 0 50px;
 }
